@@ -4,7 +4,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
 }
+.tag-line{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  animation: tagAnim 0.2s ease-in  forwards ;
+  animation-delay: 1.5s;
+
+}
+
+.text-connect{
+  color: blue
+}
+
 .card {
   background-color: #efefef;
   height: 170px;
@@ -16,8 +28,10 @@ body {
     linear-gradient(-134deg, #e8e8e8 60%, transparent 50%);
   position: relative;
   overflow: hidden;
+  animation: animation 1.5s ease-in forwards;
 }
 
+/* just a commant */
 .card::after {
   content: "";
   position: absolute;
@@ -30,4 +44,34 @@ body {
   border-right: 30px solid #d5493c;
   border-bottom: 30px solid #d5493c;
   transform: rotate(51deg) skewY(-12deg);
+}
+
+
+@keyframes animation {
+  0%{
+      transform: translateX(-100%);
+  }
+
+  25%{
+    transform: translateX(200%);
+
+  }
+
+  50%{
+    transform: translateX(-70%);
+ scale: 1.5;
+  }
+
+  100%{
+    /* rotate: 360%; */
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes tagAnim{
+
+  100%{
+    opacity: 1;
+  }
 }
